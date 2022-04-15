@@ -1,7 +1,7 @@
 {
   "engine": "cocos2d-html5",
   "packages": "packages",
-  "version": "2.4.4",
+  "version": "2.4.8",
   "name": "custom-rendering-demo",
   "id": "dff6188a-7901-48c4-8cb4-7492cd7bd451",
   "isNew": false

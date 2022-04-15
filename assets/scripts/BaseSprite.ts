@@ -8,15 +8,22 @@ export default class BaseSprite extends cc.RenderComponent {
     @property()
     protected _texture: cc.Texture2D = null;
     @property({ type: cc.Texture2D })
-    public get texture() { return this._texture; }
+    public get texture() {
+        return this._texture;
+    }
     public set texture(value) {
         this._texture = value;
         this._activateMaterial();
     }
 
-    /** 装配器 */
+    /**
+     * 装配器
+     */
     public _assembler: BaseAssembler = null;
 
+    /**
+     * 生命周期
+     */
     protected onEnable() {
         super.onEnable();
         // 节点
@@ -24,6 +31,9 @@ export default class BaseSprite extends cc.RenderComponent {
         this.node.on(cc.Node.EventType.ANCHOR_CHANGED, this.setVertsDirty, this);
     }
 
+    /**
+     * 生命周期
+     */
     protected onDisable() {
         super.onDisable();
         // 节点

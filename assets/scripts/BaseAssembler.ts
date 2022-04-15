@@ -3,25 +3,39 @@
  */
 export default class BaseAssembler extends cc.Assembler {
 
-    /** 每个顶点的数据数量 */
+    /**
+     * 每个顶点的数据数量
+     */
     public floatsPerVert: number = 5;
 
-    /** 顶点数量 */
+    /**
+     * 顶点数量
+     */
     public verticesCount: number = 4;
 
-    /** 索引数量 */
+    /**
+     * 索引数量
+     */
     public indicesCount: number = 6;
 
-    /** UV 偏移 */
+    /**
+     * UV 偏移
+     */
     public uvOffset: number = 2;
 
-    /** 颜色偏移 */
+    /**
+     * 颜色偏移
+     */
     public colorOffset: number = 4;
 
-    /** 本地坐标顶点数据 */
+    /**
+     * 本地坐标顶点数据
+     */
     public _local: number[] = null;
 
-    /** 所有顶点的数据总数量 */
+    /**
+     * 所有顶点的数据总数量
+     */
     public get verticesFloats() {
         return this.verticesCount * this.floatsPerVert;
     }
